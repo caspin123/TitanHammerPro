@@ -1,0 +1,141 @@
+# TitanHammer Pro - English Messages
+
+# GUI Messages
+gui:
+  main:
+    title: "&6&l⚒ Titan Hammer Pro ⚒"
+    player-info:
+      title: "&e&lYour Profile"
+      level: "&6Level:"
+      xp: "&bXP:"
+      progress: "&aProgress:"
+      skill-points: "&dSkill Points:"
+    
+    skill-tree:
+      title: "&d&lSkill Tree"
+      desc: "&7Unlock powerful abilities"
+      available: "&dAvailable Points:"
+    
+    upgrades:
+      title: "&6&lUpgrades"
+      desc: "&7Enhance your hammer's power"
+      damage: "&cDamage:"
+      efficiency: "&eEfficiency:"
+      fortune: "&aFortune:"
+      durability: "&bDurability:"
+      range: "&dRange:"
+    
+    filter:
+      title: "&a&lBlock Filter"
+      desc: "&7Customize block behavior"
+      current-mode: "&7Current Mode:"
+      blocks-filtered: "&7Filtered Blocks:"
+      mode:
+        none: "&7None"
+        auto_collect: "&aAuto Collect"
+        auto_delete: "&cAuto Delete"
+    
+    stats:
+      title: "&6&lStatistics"
+      blocks: "&7Blocks Destroyed:"
+      mobs: "&7Mobs Killed:"
+      damage: "&7Total Damage:"
+    
+    settings:
+      title: "&b&lSettings"
+      particles: "&7Particles:"
+      sounds: "&7Sounds:"
+      language: "&7Language:"
+    
+    shop:
+      title: "&e&lShop"
+      desc: "&7Purchase upgrades & boosters"
+    
+    click-to-open: "&e▸ Click to open"
+  
+  close: "&c&lClose"
+  back: "&c&l← Back"
+  next-page: "&a&lNext Page →"
+  previous-page: "&a&l← Previous Page"
+
+# Command Messages
+commands:
+  no-permission: "&cYou don't have permission to use this command!"
+  reload:
+    success: "&aConfiguration reloaded successfully!"
+    failed: "&cFailed to reload configuration!"
+  
+  give:
+    usage: "&cUsage: /titanhammer give <player> [level]"
+    success: "&aGave Titan Hammer (Level {level}) to {player}!"
+    player-not-found: "&cPlayer not found!"
+  
+  stats:
+    title: "&6&l=== {player}'s Statistics ==="
+    level: "&eLevel: &6{level}"
+    xp: "&eXP: &b{xp}/{required}"
+    skill-points: "&eSkill Points: &d{points}"
+    blocks: "&eBlocks Destroyed: &a{blocks}"
+    mobs: "&eMobs Killed: &c{mobs}"
+    damage: "&eTotal Damage: &6{damage}"
+
+# System Messages
+system:
+  level-up:
+    title: "&6&lLEVEL UP!"
+    subtitle: "&eYou are now level {level}"
+    chat: "&a✦ &eYou leveled up to &6Level {level}&e! &a✦"
+    skill-points: "&a+1 Skill Point!"
+  
+  upgrade:
+    success: "&a✓ Successfully upgraded {upgrade} to level {level}!"
+    max-level: "&cThis upgrade is already at maximum level!"
+    insufficient-funds: "&cYou don't have enough {currency}!"
+    insufficient-points: "&cYou don't have enough skill points!"
+  
+  skill:
+    unlock-success: "&a✓ Successfully unlocked {skill}!"
+    upgrade-success: "&a✓ {skill} upgraded to level {level}!"
+    max-level: "&cThis skill is already at maximum level!"
+    insufficient-points: "&cYou don't have enough skill points!"
+    requires-previous: "&cYou must unlock {previous} first!"
+  
+  filter:
+    mode-changed: "&aFilter mode changed to: {mode}"
+    block-added: "&a✓ Added {block} to filter list"
+    block-removed: "&c✗ Removed {block} from filter list"
+    max-blocks: "&cYou have reached the maximum number of filtered blocks!"
+  
+  error:
+    no-titan-hammer: "&cYou must be holding a Titan Hammer!"
+    database-error: "&cA database error occurred. Please contact an administrator!"
+    unknown: "&cAn unknown error occurred!"
+
+# Item Names & Descriptions
+items:
+  titan-hammer:
+    name: "&6&l⚒ &e&lTitan Hammer &6&l⚒"
+    lore:
+      - "&7A legendary hammer forged by titans"
+      - "&7that can reshape the world itself."
+      - ""
+      - "&6✦ Level: &e{level}"
+      - "&6✦ Damage: &c+{damage}%"
+      - "&6✦ Efficiency: &e+{efficiency}"
+      - "&6✦ Fortune: &a+{fortune}"
+      - "&6✦ Durability: &b+{durability}%"
+      - "&6✦ Range: &d{range}x{range}"
+      - ""
+      - "&e▸ Shift + Right Click to open menu"
+
+# Placeholders
+placeholders:
+  level: "{level}"
+  xp: "{xp}"
+  required-xp: "{required}"
+  skill-points: "{points}"
+  damage: "{damage}"
+  efficiency: "{efficiency}"
+  fortune: "{fortune}"
+  durability: "{durability}"
+  range: "{range}"

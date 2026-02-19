@@ -1,0 +1,358 @@
+# TitanHammer Pro Configuration
+# Author: Blooddev
+# Version: 1.0.0
+
+# Database Settings
+database:
+  type: SQLITE # SQLITE or MYSQL
+  mysql:
+    host: localhost
+    port: 3306
+    database: titanhammer
+    username: root
+    password: password
+    pool-size: 10
+
+# Titan Hammer Item Settings
+titan-hammer:
+  custom-model-data: 2025
+  display-name: "&6&l⚒ &e&lTitan Hammer &6&l⚒"
+  lore:
+    - "&7A legendary hammer forged by titans"
+    - "&7that can reshape the world itself."
+    - ""
+    - "&6✦ Level Required: &e1"
+    - "&6✦ Damage: &c+{damage}%"
+    - "&6✦ Efficiency: &e+{efficiency}"
+    - "&6✦ Fortune: &a+{fortune}"
+    - "&6✦ Durability: &b+{durability}%"
+    - "&6✦ Range: &d{range}x{range}"
+    - ""
+    - "&e▸ Shift + Right Click to open menu"
+  
+  # Starting stats
+  base-damage: 10.0
+  base-efficiency: 5
+  base-durability: 2031
+
+# Level System
+level-system:
+  enabled: true
+  max-level: 100
+  base-xp: 100
+  xp-multiplier: 1.5
+  skill-points-per-level: 1
+  
+  # XP Sources
+  xp-sources:
+    block-break:
+      enabled: true
+      multipliers:
+        STONE: 1.0
+        DEEPSLATE: 1.2
+        COAL_ORE: 2.0
+        IRON_ORE: 3.0
+        GOLD_ORE: 4.0
+        DIAMOND_ORE: 10.0
+        EMERALD_ORE: 8.0
+        ANCIENT_DEBRIS: 20.0
+        NETHERITE_BLOCK: 30.0
+        OBSIDIAN: 5.0
+    
+    mob-kill:
+      enabled: true
+      base-xp: 10.0
+      mythicmobs-multiplier: 2.0
+
+# Skill Tree Settings
+skill-tree:
+  enabled: true
+  skills:
+    titan_strength:
+      name: "&c&lTitan Strength"
+      max-level: 5
+      cost-per-level: 1
+      benefits:
+        - "&c+5% Damage per level"
+        - "&c+2% Critical Hit Chance"
+    
+    stone_breaker:
+      name: "&7&lStone Breaker"
+      max-level: 5
+      cost-per-level: 1
+      benefits:
+        - "&7+10% Mining Speed on Stone"
+        - "&7+5% Range on Stone"
+    
+    ore_master:
+      name: "&e&lOre Master"
+      max-level: 5
+      cost-per-level: 2
+      benefits:
+        - "&e+15% Fortune on Ores"
+        - "&e+20% XP from Ores"
+    
+    unbreakable:
+      name: "&b&lUnbreakable"
+      max-level: 5
+      cost-per-level: 1
+      benefits:
+        - "&b+10% Durability per level"
+        - "&b-5% Repair Cost"
+    
+    area_destruction:
+      name: "&d&lArea Destruction"
+      max-level: 5
+      cost-per-level: 3
+      benefits:
+        - "&d+1 Range per level (3x3, 5x5, etc)"
+        - "&d-10% Range Durability Cost"
+    
+    mob_slayer:
+      name: "&4&lMob Slayer"
+      max-level: 5
+      cost-per-level: 2
+      benefits:
+        - "&4+20% Damage to Mobs"
+        - "&4+10% Drop Rate"
+
+# Upgrade System
+upgrades:
+  damage:
+    max-level: 10
+    cost-type: MONEY # MONEY, POINTS, or CUSTOM
+    costs:
+      1: 1000
+      2: 2500
+      3: 5000
+      4: 10000
+      5: 20000
+      6: 40000
+      7: 75000
+      8: 150000
+      9: 300000
+      10: 500000
+    bonus-per-level: 15 # 15% per level
+  
+  efficiency:
+    max-level: 10
+    cost-type: MONEY
+    costs:
+      1: 800
+      2: 2000
+      3: 4000
+      4: 8000
+      5: 16000
+      6: 32000
+      7: 60000
+      8: 120000
+      9: 240000
+      10: 400000
+    bonus-per-level: 2 # +2 efficiency levels
+  
+  fortune:
+    max-level: 5
+    cost-type: POINTS
+    costs:
+      1: 500
+      2: 1000
+      3: 2000
+      4: 4000
+      5: 8000
+    bonus-per-level: 1 # +1 fortune level
+  
+  durability:
+    max-level: 10
+    cost-type: MONEY
+    costs:
+      1: 1500
+      2: 3000
+      3: 6000
+      4: 12000
+      5: 24000
+      6: 48000
+      7: 90000
+      8: 180000
+      9: 360000
+      10: 600000
+    bonus-per-level: 10 # 10% less durability damage
+  
+  range:
+    max-level: 5
+    cost-type: CUSTOM
+    costs:
+      1: 5000
+      2: 15000
+      3: 35000
+      4: 75000
+      5: 150000
+    bonus-per-level: 1 # +1 block range (3x3 -> 5x5 -> 7x7)
+
+# Block Filter Settings
+block-filter:
+  enabled: true
+  max-filtered-blocks: 50
+  modes:
+    auto-collect:
+      enabled: true
+      name: "&a&lAuto Collect Mode"
+      description:
+        - "&7Selected blocks will be automatically"
+        - "&7collected into your inventory"
+    
+    auto-delete:
+      enabled: true
+      name: "&c&lAuto Delete Mode"
+      description:
+        - "&7Selected blocks will be automatically"
+        - "&7deleted without any drops"
+  
+  # Pre-defined filter groups
+  filter-groups:
+    ores:
+      - COAL_ORE
+      - DEEPSLATE_COAL_ORE
+      - IRON_ORE
+      - DEEPSLATE_IRON_ORE
+      - GOLD_ORE
+      - DEEPSLATE_GOLD_ORE
+      - DIAMOND_ORE
+      - DEEPSLATE_DIAMOND_ORE
+      - EMERALD_ORE
+      - DEEPSLATE_EMERALD_ORE
+      - LAPIS_ORE
+      - DEEPSLATE_LAPIS_ORE
+      - REDSTONE_ORE
+      - DEEPSLATE_REDSTONE_ORE
+      - NETHER_QUARTZ_ORE
+      - NETHER_GOLD_ORE
+      - ANCIENT_DEBRIS
+    
+    stone:
+      - STONE
+      - ANDESITE
+      - DIORITE
+      - GRANITE
+      - DEEPSLATE
+      - TUFF
+      - CALCITE
+    
+    dirt:
+      - DIRT
+      - GRASS_BLOCK
+      - COARSE_DIRT
+      - PODZOL
+      - MYCELIUM
+
+# MythicMobs Integration
+mythicmobs:
+  enabled: true
+  damage-bonus: 25 # +25% damage to MythicMobs
+  drop-bonus:
+    enabled: true
+    multiplier: 1.5 # 1.5x drops from MythicMobs
+    chance: 100 # 100% chance to apply bonus
+
+# Anti-Exploit Protection
+anti-exploit:
+  silk-touch-protection:
+    enabled: true
+    cancel-silk-touch: true # Prevent using Titan Hammer with Silk Touch
+  
+  duplication-protection:
+    enabled: true
+    cooldown: 50 # milliseconds between block breaks
+  
+  region-protection:
+    enabled: true
+    respect-worldguard: true
+    respect-residence: true
+    respect-towny: true
+    respect-griefprevention: true
+
+# Effects Settings
+effects:
+  particles:
+    enabled: true
+    block-break:
+      type: EXPLOSION
+      amount: 10
+      speed: 0.1
+    
+    level-up:
+      type: TOTEM_OF_UNDYING
+      amount: 50
+      speed: 0.2
+    
+    upgrade:
+      type: ENCHANT
+      amount: 30
+      speed: 0.1
+  
+  sounds:
+    enabled: true
+    block-break:
+      sound: ENTITY_PLAYER_ATTACK_STRONG
+      volume: 0.8
+      pitch: 1.2
+    
+    level-up:
+      sound: ENTITY_PLAYER_LEVELUP
+      volume: 1.0
+      pitch: 1.0
+    
+    upgrade:
+      sound: BLOCK_ANVIL_USE
+      volume: 0.8
+      pitch: 1.5
+    
+    gui-open:
+      sound: BLOCK_CHEST_OPEN
+      volume: 0.5
+      pitch: 1.0
+    
+    gui-click:
+      sound: UI_BUTTON_CLICK
+      volume: 0.3
+      pitch: 1.0
+
+# Economy Settings
+economy:
+  primary: VAULT # VAULT, PLAYERPOINTS, or CUSTOM
+  
+  vault:
+    enabled: true
+  
+  playerpoints:
+    enabled: true
+  
+  custom:
+    enabled: true
+    currency-name: "Hammer Tokens"
+    currency-symbol: "⚒"
+
+# Performance Settings
+performance:
+  async-database: true
+  cache-player-data: true
+  cache-duration: 300 # seconds
+  auto-save-interval: 600 # seconds (10 minutes)
+  max-range-blocks: 343 # Maximum blocks in range mining (7x7x7)
+
+# Messages Settings (See messages_en.yml and messages_ar.yml)
+messages:
+  default-language: en
+  available-languages:
+    - en
+    - ar
+  
+  prefix: "&6[&e⚒&6] "
+  
+  # Color codes
+  colors:
+    primary: "&6"
+    secondary: "&e"
+    success: "&a"
+    error: "&c"
+    info: "&b"
+    warning: "&e"

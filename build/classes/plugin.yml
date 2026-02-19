@@ -1,0 +1,41 @@
+name: TitanHammerPro
+version: 1.0.0
+main: dev.blooddev.titanhammer.TitanHammerPro
+api-version: '1.21'
+author: Blooddev
+description: Professional Titan Hammer plugin with advanced features
+website: https://primehost.iq
+
+softdepend: [Vault, PlayerPoints, MythicMobs]
+
+commands:
+  titanhammer:
+    description: Main TitanHammer command
+    usage: /titanhammer <reload|give|stats|help>
+    aliases: [th, hammer, titan]
+
+permissions:
+  titanhammer.*:
+    description: Gives access to all TitanHammer permissions
+    default: op
+    children:
+      titanhammer.use: true
+      titanhammer.admin: true
+      titanhammer.give: true
+      titanhammer.reload: true
+  
+  titanhammer.use:
+    description: Allows using the Titan Hammer
+    default: true
+  
+  titanhammer.admin:
+    description: Admin permissions
+    default: op
+  
+  titanhammer.give:
+    description: Allows giving Titan Hammer to players
+    default: op
+  
+  titanhammer.reload:
+    description: Allows reloading the plugin
+    default: op

@@ -1,0 +1,141 @@
+# TitanHammer Pro - Arabic Messages
+
+# GUI Messages
+gui:
+  main:
+    title: "&6&l⚒ مطرقة التيتان برو ⚒"
+    player-info:
+      title: "&e&lملفك الشخصي"
+      level: "&6المستوى:"
+      xp: "&bالخبرة:"
+      progress: "&aالتقدم:"
+      skill-points: "&dنقاط المهارة:"
+    
+    skill-tree:
+      title: "&d&lشجرة المهارات"
+      desc: "&7افتح قدرات قوية"
+      available: "&dالنقاط المتاحة:"
+    
+    upgrades:
+      title: "&6&lالترقيات"
+      desc: "&7عزز قوة مطرقتك"
+      damage: "&cالضرر:"
+      efficiency: "&eالكفاءة:"
+      fortune: "&aالحظ:"
+      durability: "&bالمتانة:"
+      range: "&dالمدى:"
+    
+    filter:
+      title: "&a&lفلتر البلوكات"
+      desc: "&7خصص سلوك البلوكات"
+      current-mode: "&7الوضع الحالي:"
+      blocks-filtered: "&7البلوكات المفلترة:"
+      mode:
+        none: "&7لا شيء"
+        auto_collect: "&aجمع تلقائي"
+        auto_delete: "&cحذف تلقائي"
+    
+    stats:
+      title: "&6&lالإحصائيات"
+      blocks: "&7البلوكات المدمرة:"
+      mobs: "&7الوحوش المقتولة:"
+      damage: "&7إجمالي الضرر:"
+    
+    settings:
+      title: "&b&lالإعدادات"
+      particles: "&7الجزيئات:"
+      sounds: "&7الأصوات:"
+      language: "&7اللغة:"
+    
+    shop:
+      title: "&e&lالمتجر"
+      desc: "&7اشترِ الترقيات والمعززات"
+    
+    click-to-open: "&e▸ اضغط للفتح"
+  
+  close: "&c&lإغلاق"
+  back: "&c&l→ رجوع"
+  next-page: "&a&lالصفحة التالية ←"
+  previous-page: "&a&l→ الصفحة السابقة"
+
+# Command Messages
+commands:
+  no-permission: "&cليس لديك صلاحية لاستخدام هذا الأمر!"
+  reload:
+    success: "&aتم إعادة تحميل الإعدادات بنجاح!"
+    failed: "&cفشل إعادة تحميل الإعدادات!"
+  
+  give:
+    usage: "&cالاستخدام: /titanhammer give <لاعب> [مستوى]"
+    success: "&aتم إعطاء مطرقة التيتان (المستوى {level}) إلى {player}!"
+    player-not-found: "&cاللاعب غير موجود!"
+  
+  stats:
+    title: "&6&l=== إحصائيات {player} ==="
+    level: "&eالمستوى: &6{level}"
+    xp: "&eالخبرة: &b{xp}/{required}"
+    skill-points: "&eنقاط المهارة: &d{points}"
+    blocks: "&eالبلوكات المدمرة: &a{blocks}"
+    mobs: "&eالوحوش المقتولة: &c{mobs}"
+    damage: "&eإجمالي الضرر: &6{damage}"
+
+# System Messages
+system:
+  level-up:
+    title: "&6&lارتقاء مستوى!"
+    subtitle: "&eأنت الآن في المستوى {level}"
+    chat: "&a✦ &eلقد ارتقيت إلى &6المستوى {level}&e! &a✦"
+    skill-points: "&a+1 نقطة مهارة!"
+  
+  upgrade:
+    success: "&a✓ تم ترقية {upgrade} إلى المستوى {level} بنجاح!"
+    max-level: "&cهذه الترقية في المستوى الأقصى بالفعل!"
+    insufficient-funds: "&cليس لديك {currency} كافي!"
+    insufficient-points: "&cليس لديك نقاط مهارة كافية!"
+  
+  skill:
+    unlock-success: "&a✓ تم فتح {skill} بنجاح!"
+    upgrade-success: "&a✓ تمت ترقية {skill} إلى المستوى {level}!"
+    max-level: "&cهذه المهارة في المستوى الأقصى بالفعل!"
+    insufficient-points: "&cليس لديك نقاط مهارة كافية!"
+    requires-previous: "&cيجب فتح {previous} أولاً!"
+  
+  filter:
+    mode-changed: "&aتم تغيير وضع الفلتر إلى: {mode}"
+    block-added: "&a✓ تمت إضافة {block} إلى قائمة الفلتر"
+    block-removed: "&c✗ تمت إزالة {block} من قائمة الفلتر"
+    max-blocks: "&cلقد وصلت إلى الحد الأقصى من البلوكات المفلترة!"
+  
+  error:
+    no-titan-hammer: "&cيجب أن تحمل مطرقة التيتان!"
+    database-error: "&cحدث خطأ في قاعدة البيانات. يرجى الاتصال بالمسؤول!"
+    unknown: "&cحدث خطأ غير معروف!"
+
+# Item Names & Descriptions
+items:
+  titan-hammer:
+    name: "&6&l⚒ &e&lمطرقة التيتان &6&l⚒"
+    lore:
+      - "&7مطرقة أسطورية صنعها التيتان"
+      - "&7يمكنها إعادة تشكيل العالم نفسه."
+      - ""
+      - "&6✦ المستوى: &e{level}"
+      - "&6✦ الضرر: &c+{damage}%"
+      - "&6✦ الكفاءة: &e+{efficiency}"
+      - "&6✦ الحظ: &a+{fortune}"
+      - "&6✦ المتانة: &b+{durability}%"
+      - "&6✦ المدى: &d{range}x{range}"
+      - ""
+      - "&e▸ Shift + زر يمين لفتح القائمة"
+
+# Placeholders
+placeholders:
+  level: "{level}"
+  xp: "{xp}"
+  required-xp: "{required}"
+  skill-points: "{points}"
+  damage: "{damage}"
+  efficiency: "{efficiency}"
+  fortune: "{fortune}"
+  durability: "{durability}"
+  range: "{range}"
